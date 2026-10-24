@@ -73,15 +73,6 @@ const Contact = () => {
       color: "text-purple-500", 
       bgColor: "bg-purple-500/10"
     },
-    {
-      icon: <Calendar className="h-6 w-6" />,
-      title: "Agenda",
-      value: "Agendar reunião",
-      description: "Vamos conversar sobre seu projeto",
-      action: () => window.open("https://calendly.com/usuario"),
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10"
-    }
   ];
 
   /*
@@ -205,7 +196,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-muted/5">
+    <section id="contact" className="bg-muted/5 px-4 py-20">
       {/* 
         CONFIGURAÇÃO DA SEÇÃO:
         - bg-muted/5: fundo levemente diferente para destacar
@@ -214,29 +205,29 @@ const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         
         {/* TÍTULO DA SEÇÃO */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
             Entre em <span className="gradient-text">Contato</span>
           </h2>
           
-          <div className="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <div className="gradient-bg mx-auto mb-6 h-1 w-24 rounded-full"></div>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Tem um projeto em mente? Vamos conversar e transformar suas ideias em realidade!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12">
           
           {/* COLUNA ESQUERDA - INFORMAÇÕES DE CONTATO */}
           <div className="space-y-8">
             
             {/* INTRODUÇÃO */}
-            <div>
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold">
                 Vamos trabalhar <span className="gradient-text">juntos</span>
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="leading-relaxed text-muted-foreground">
                 Estou sempre interessado em novos projetos e oportunidades. 
                 Seja para uma consultoria, desenvolvimento de projeto ou apenas 
                 para trocar ideias sobre tecnologia, ficarei feliz em conversar!
@@ -244,32 +235,32 @@ const Contact = () => {
             </div>
 
             {/* CARDS DE INFORMAÇÕES DE CONTATO */}
-            <div className="space-y-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               {contactInfo.map((info, index) => (
                 <Card 
                   key={index}
                   className={`
-                    card-gradient border-border/50 hover:border-primary/30 transition-all duration-300 
+                    card-gradient border-border/50 transition-all duration-300 hover:border-primary/30
                     ${info.action ? 'cursor-pointer hover:shadow-lg' : 'cursor-default'}
                   `}
                   onClick={info.action || undefined}
                 >
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
                       
                       {/* ÍCONE */}
-                      <div className={`p-3 rounded-lg ${info.bgColor}`}>
+                      <div className={`shrink-0 rounded-lg p-3 ${info.bgColor}`}>
                         <div className={info.color}>
                           {info.icon}
                         </div>
                       </div>
                       
                       {/* INFORMAÇÕES */}
-                      <div className="flex-1">
+                      <div className="min-w-0 flex-1">
                         <h4 className="font-semibold text-foreground">
                           {info.title}
                         </h4>
-                        <p className="text-primary font-medium">
+                        <p className="break-words font-medium text-primary">
                           {info.value}
                         </p>
                         <p className="text-sm text-muted-foreground">
@@ -284,21 +275,18 @@ const Contact = () => {
 
             {/* REDES SOCIAIS */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">
+              <h4 className="mb-4 text-lg font-semibold">
                 Me siga nas redes sociais
               </h4>
               
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`
-                      p-3 rounded-lg bg-muted/20 text-muted-foreground transition-all duration-300 
-                      hover:scale-110 hover:bg-primary/10 ${social.color}
-                    `}
+                    className={`rounded-lg bg-muted/20 p-3 text-muted-foreground transition-all duration-300 hover:scale-110 hover:bg-primary/10 ${social.color}`}
                     title={social.name}
                   >
                     {social.icon}
@@ -310,102 +298,94 @@ const Contact = () => {
 
           {/* COLUNA DIREITA - FORMULÁRIO DE CONTATO */}
           <Card className="card-gradient border-border/50">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold flex items-center">
-                <MessageSquare className="h-6 w-6 text-primary mr-2" />
+            <CardHeader className="space-y-2 p-6 pb-4 sm:p-8 sm:pb-5">
+              <CardTitle className="flex items-center gap-3 text-2xl">
+                <span className="rounded-lg bg-primary/10 p-2 text-primary">
+                  <MessageSquare className="h-5 w-5" />
+                </span>
                 Envie uma mensagem
               </CardTitle>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Preencha o formulário e conte um pouco sobre o seu projeto.
+              </p>
             </CardHeader>
 
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                {/* CAMPO NOME */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Nome *
-                  </label>
-                  <Input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Seu nome completo"
-                    className="w-full transition-all duration-300 focus:ring-2 focus:ring-primary/20"
-                    disabled={isSubmitting}
-                  />
-                </div>
+            <CardContent className="p-6 pt-2 sm:p-8 sm:pt-3">
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Nome
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Seu nome"
+                      autoComplete="name"
+                      disabled={isSubmitting}
+                      required
+                    />
+                  </div>
 
-                {/* CAMPO EMAIL */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Email *
-                  </label>
-                  <Input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="seu@email.com"
-                    className="w-full transition-all duration-300 focus:ring-2 focus:ring-primary/20"
-                    disabled={isSubmitting}
-                  />
-                </div>
-
-                {/* CAMPO ASSUNTO */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Assunto *
-                  </label>
-                  <Input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    placeholder="Sobre o que você gostaria de falar?"
-                    className="w-full transition-all duration-300 focus:ring-2 focus:ring-primary/20"
-                    disabled={isSubmitting}
-                  />
-                </div>
-
-                {/* CAMPO MENSAGEM */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Mensagem *
-                  </label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Conte-me sobre seu projeto, ideias ou como posso ajudar..."
-                    rows={5}
-                    className="w-full resize-none transition-all duration-300 focus:ring-2 focus:ring-primary/20"
-                    disabled={isSubmitting}
-                  />
-                  
-                  {/* CONTADOR DE CARACTERES */}
-                  <div className="text-right text-xs text-muted-foreground mt-1">
-                    {formData.message.length} caracteres
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="seu@email.com"
+                      autoComplete="email"
+                      disabled={isSubmitting}
+                      required
+                    />
                   </div>
                 </div>
 
-                {/* BOTÃO DE ENVIO */}
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium">
+                    Assunto
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="Como posso ajudar?"
+                    disabled={isSubmitting}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Mensagem
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Descreva seu projeto ou sua ideia..."
+                    className="min-h-36 resize-y"
+                    disabled={isSubmitting}
+                    required
+                  />
+                </div>
+
                 <Button
                   type="submit"
+                  size="lg"
+                  className="gradient-bg w-full transition-all duration-300 hover:scale-[1.01] hover:shadow-lg"
                   disabled={isSubmitting}
-                  className="w-full gradient-bg hover:shadow-lg transition-all duration-300 disabled:opacity-50"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Enviar Mensagem
-                    </>
-                  )}
+                  <Send className="mr-2 h-5 w-5" />
+                  {isSubmitting ? "Enviando..." : "Enviar mensagem"}
                 </Button>
               </form>
             </CardContent>
@@ -413,34 +393,25 @@ const Contact = () => {
         </div>
 
         {/* CALL TO ACTION FINAL */}
-        <div className="text-center mt-16 p-8 rounded-2xl card-gradient border border-border/50">
-          <div className="text-4xl mb-4">🚀</div>
-          <h3 className="text-2xl font-bold mb-2">
+        <div className="card-gradient mt-12 rounded-2xl border border-border/50 p-6 text-center md:mt-16 md:p-8">
+          <div className="mb-4 text-4xl">🚀</div>
+          <h3 className="mb-2 text-2xl font-bold">
             Pronto para começar seu projeto?
           </h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="mx-auto mb-6 max-w-2xl text-muted-foreground">
             Transforme sua ideia em realidade. Vamos criar algo incrível juntos!
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <Button 
               size="lg"
               className="gradient-bg hover:shadow-lg hover:scale-105 transition-all duration-300"
-              onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Mail className="mr-2 h-5 w-5" />
               Enviar Mensagem
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary/50 text-primary hover:bg-primary/10 hover:scale-105 transition-all duration-300"
-              onClick={() => window.open("https://calendly.com/usuario", '_blank')}
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              Agendar Reunião
-            </Button>
           </div>
         </div>
       </div>
