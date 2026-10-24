@@ -26,82 +26,78 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Moderno",
-      description: "Plataforma completa de e-commerce com carrinho de compras, pagamentos integrados, painel administrativo e sistema de avaliações. Interface responsiva e experiência de usuário otimizada.",
-      longDescription: "Este projeto foi desenvolvido com foco na experiência do usuário e performance. Inclui funcionalidades como busca avançada, filtros dinâmicos, wishlist, sistema de cupons e relatórios de vendas.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind"],
-      category: "fullstack",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      demoUrl: "https://demo.exemplo.com",
-      githubUrl: "https://github.com/usuario/ecommerce",
+      title: "GenZ1n Tech",
+      description: "Portifólio da empresa GenZ1n Tech, apresentando seus serviços e projetos.",
+      technologies: ["React", "Node.js", "PostgreSQL", "Vite", "Tailwind"],
+      category: "frontend",
+      image: "/public/genz1n.png",
+      demoUrl: "https://gz1n.com/",
+      githubUrl: null,
       status: "Concluído",
       featured: true
     },
     {
       id: 2,
-      title: "Dashboard Analytics",
-      description: "Dashboard interativo para análise de dados com gráficos dinâmicos, relatórios em tempo real e sistema de notificações. Interface intuitiva para tomada de decisões.",
-      longDescription: "Sistema completo de analytics com integração a múltiplas fontes de dados, visualizações personalizáveis e alertas automatizados para métricas importantes.",
-      technologies: ["React", "TypeScript", "Recharts", "Supabase", "Tailwind"],
-      category: "frontend", 
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      demoUrl: "https://analytics.exemplo.com",
-      githubUrl: "https://github.com/usuario/dashboard",
+      title: "Lumenous",
+      description: "É um site institucional para a empresa Lumenous, destacando seu produto e serviços. Onde é possível que o usuário edite toda a parte do frontend pelo Dashboard.",
+      technologies: ["React", "TypeScript", "PHP/Larável", "MySQL", "Tailwind"],
+      category: "fullstack", 
+      image: "/public/lumenous.png",
+      demoUrl: "https://www.lumenous.com.br/",
+      githubUrl: null,
       status: "Concluído",
       featured: true
     },
     {
       id: 3,
-      title: "API de Gestão",
-      description: "API RESTful robusta para sistema de gestão empresarial com autenticação JWT, documentação completa e testes automatizados. Arquitetura escalável e segura.",
-      longDescription: "API desenvolvida seguindo os princípios REST com foco em performance e segurança. Inclui rate limiting, logs detalhados e integração com serviços externos.",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
-      category: "backend",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-      demoUrl: null,
-      githubUrl: "https://github.com/usuario/api-gestao",
+      title: "LP Saúde - Clinica Particular",
+      description: "Landing page para uma clínica particular, com informações sobre os serviços e tratamentos disponíveis.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind"],
+      category: "frontend",
+      image: "/public/lp-saude.png",
+      demoUrl: "https://lpsauderecife.com.br/",
+      githubUrl: null,
       status: "Concluído",
       featured: false
     },
     {
       id: 4,
-      title: "App de Tarefas",
-      description: "Aplicativo mobile para gerenciamento de tarefas com sincronização offline, notificações push e interface intuitiva. Produtividade ao alcance das suas mãos.",
+      title: "LP Benefícios",
+      description: "Landing page para uma empresa de benefícios, com informações sobre os serviços e vantagens disponíveis.",
+      longDescription: "Página desenvolvida com foco em conversão, incluindo A/B testing, analytics avançados, formulários otimizados e integração com CRM.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind"],
+      category: "frontend",
+      image: "/public/lp-beneficios.png",
+      demoUrl: "https://lpbeneficios.com.br/",
+      githubUrl: null,
+      status: "Concluído",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Arte e Frequência",
+      description: "Plataforma para cadastro de alunos, colaboradores e voluntários, controle de frequência nas oficinas e divulgação de ações sociais.",
       longDescription: "App desenvolvido em React Native com foco na experiência mobile. Sincronização automática, widgets personalizáveis e integração com calendários.",
-      technologies: ["React Native", "Expo", "AsyncStorage", "Push Notifications"],
-      category: "mobile",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop",
-      demoUrl: "https://expo.dev/@usuario/task-app",
-      githubUrl: "https://github.com/usuario/task-app",
-      status: "Em desenvolvimento",
+      technologies: ["React", "Flutter", "Java/Spring Boot", "Vite"],
+      category: "fullstack/mobile",
+      image: "/public/arte-frequencia.png",
+      demoUrl: "https://projeto-arte-frequencia.netlify.app/",
+      githubUrl: null,
+      status: "Concluído",
       featured: false
     },
     {
       id: 5,
-      title: "Landing Page SaaS",
-      description: "Landing page moderna e convertedora para startup de SaaS com animações suaves, seções otimizadas para conversão e integração com ferramentas de marketing.",
-      longDescription: "Página desenvolvida com foco em conversão, incluindo A/B testing, analytics avançados, formulários otimizados e integração com CRM.",
-      technologies: ["Next.js", "Framer Motion", "Tailwind", "Vercel"],
-      category: "frontend",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      demoUrl: "https://saas-landing.exemplo.com",
-      githubUrl: "https://github.com/usuario/saas-landing",
-      status: "Concluído",
+      title: "Gestão de Cartões de Crédito",
+      description: "Aplicação web para gerenciamento de cartões de crédito, permitindo controle de gastos, alertas de vencimento e relatórios detalhados.",
+      technologies: ["Next.js", "TypeScript", "React", "Lovable UI", "PostgreSQL"],
+      category: "fullstack",
+      image: "/public/gestao-de-cartoes.png",
+      demoUrl: null,
+      githubUrl: "https://github.com/AndrewRivaldoDeAlbuquerque/Gestao-de-cartao",
+      status: "Em desenvolvimento",
       featured: true
     },
-    {
-      id: 6,
-      title: "Sistema de Blog",
-      description: "CMS personalizado para blog com editor rico, sistema de comentários, SEO otimizado e painel administrativo completo. Perfeito para criadores de conteúdo.",
-      longDescription: "Sistema completo de gerenciamento de conteúdo com editor WYSIWYG, upload de mídia, sistema de tags, comentários moderados e analytics de posts.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Rich Text Editor"],
-      category: "fullstack",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      demoUrl: "https://blog.exemplo.com",
-      githubUrl: "https://github.com/usuario/cms-blog",
-      status: "Concluído",
-      featured: false
-    }
   ];
 
   /*
@@ -210,15 +206,17 @@ const Projects = () => {
                   )}
                   
                   {/* BOTÃO GITHUB */}
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="bg-background/20 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                  >
-                    <Github className="h-4 w-4 mr-2" />
-                    Código
-                  </Button>
+                  {project.githubUrl && (
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="bg-background/20 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                    >
+                      <Github className="h-4 w-4 mr-2" />
+                      Código
+                    </Button>
+                  )}
                 </div>
 
                 {/* BADGE DE PROJETO EM DESTAQUE */}
@@ -278,15 +276,17 @@ const Projects = () => {
                     </Button>
                   )}
                   
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 hover:bg-primary/10 hover:text-primary hover:border-primary/50"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                  >
-                    <Github className="h-4 w-4 mr-2" />
-                    Código
-                  </Button>
+                  {project.githubUrl && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1 hover:bg-primary/10 hover:text-primary hover:border-primary/50"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                    >
+                      <Github className="h-4 w-4 mr-2" />
+                      Código
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -313,7 +313,7 @@ const Projects = () => {
           <Button 
             size="lg"
             className="gradient-bg hover:shadow-lg hover:scale-105 transition-all duration-300 px-8 py-3"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => window.open("https://github.com/AndrewRivaldoDeAlbuquerque", "_blank")}
           >
             <Github className="mr-2 h-5 w-5" />
             Ver Mais no GitHub
