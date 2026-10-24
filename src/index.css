@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  SISTEMA DE DESIGN PARA PORTFÓLIO
+  Aqui definimos todas as cores, gradientes e estilos do nosso portfólio
+  Todas as cores são definidas em formato HSL (Hue, Saturation, Lightness)
+*/
+
+@layer base {
+  :root {
+    /* CORES DE FUNDO E TEXTO PRINCIPAL */
+    --background: 240 10% 3.9%;          /* Fundo escuro moderno */
+    --foreground: 0 0% 98%;              /* Texto claro para contraste */
+
+    /* CORES DE CARTÕES E COMPONENTES */
+    --card: 240 10% 3.9%;               /* Mesma cor do fundo para harmonia */
+    --card-foreground: 0 0% 98%;        /* Texto dos cartões */
+
+    /* CORES DE POPOVERS E DROPDOWNS */
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* COR PRIMÁRIA - Azul vibrante para destaques */
+    --primary: 217 91% 60%;              /* Azul moderno e profissional */
+    --primary-foreground: 0 0% 98%;     /* Texto sobre a cor primária */
+    --primary-glow: 217 91% 70%;        /* Versão mais clara para efeitos */
+
+    /* COR SECUNDÁRIA - Cinza suave */
+    --secondary: 240 4.8% 95.9%;        
+    --secondary-foreground: 240 5.9% 10%;
+
+    /* CORES NEUTRAS */
+    --muted: 240 5.9% 10%;              /* Cor neutra escura */
+    --muted-foreground: 240 5% 64.9%;  /* Texto secundário */
+
+    /* COR DE DESTAQUE - Roxo elegante */
+    --accent: 270 95% 75%;              /* Roxo vibrante para elementos especiais */
+    --accent-foreground: 0 0% 98%;
+
+    /* CORES DE ERRO */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* CORES DE BORDAS E INPUTS */
+    --border: 240 5.9% 20%;             /* Bordas sutis */
+    --input: 240 5.9% 20%;
+    --ring: 217 91% 60%;                /* Cor de foco (mesma do primary) */
+
+    --radius: 0.5rem;
+
+    /* GRADIENTES PERSONALIZADOS PARA O PORTFÓLIO */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 95% 75%)); /* Azul para roxo */
+    --gradient-card: linear-gradient(145deg, hsl(240 10% 6%), hsl(240 10% 8%));     /* Gradiente sutil para cards */
+    --gradient-text: linear-gradient(135deg, hsl(217 91% 70%), hsl(270 95% 80%));   /* Para texto com gradiente */
+
+    /* SOMBRAS ELEGANTES */
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);                               /* Brilho azul */
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);                          /* Sombra de cartão */
+    --shadow-hover: 0 20px 40px -10px hsl(217 91% 60% / 0.2);                     /* Sombra no hover */
+
+    /* ANIMAÇÕES SUAVES */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);                   /* Transição suave */
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);       /* Efeito mola */
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Fonte suave e scroll personalizado */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Evita scroll horizontal */
+  }
+
+  /* CLASSES UTILITÁRIAS PERSONALIZADAS */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  /* ANIMAÇÕES PERSONALIZADAS */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: var(--shadow-glow); }
+    50% { box-shadow: 0 0 60px hsl(217 91% 60% / 0.4); }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+  }
+
+  /* SCROLLBAR PERSONALIZADA */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
