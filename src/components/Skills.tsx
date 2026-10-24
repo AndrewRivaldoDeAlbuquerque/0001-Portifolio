@@ -38,10 +38,10 @@ const Skills = () => {
       bgColor: "bg-blue-500/10",
       skills: [
         { name: "React.js", level: 80 },
-        { name: "TypeScript", level: 25 },
+        { name: "TypeScript", level: 75 },
         { name: "JavaScript", level: 70 },
         { name: "HTML5/CSS3", level: 80 },
-        { name: "PHP", level: 60 }
+        { name: "PHP", level: 70 }
       ]
     },
     {
@@ -52,10 +52,10 @@ const Skills = () => {
       bgColor: "bg-green-500/10",
       skills: [
         { name: "Spring boot", level: 80 },
-        { name: "Java", level: 85 },
-        { name: "Python", level: 35 },
-        { name: "API REST", level: 90 },
-        { name: "Laravel", level: 65 }
+        { name: "Java", level: 80 },
+        { name: "Python", level: 65 },
+        { name: "API REST", level: 80 },
+        { name: "Laravel", level: 70 }
       ]
     },
     {
@@ -65,9 +65,9 @@ const Skills = () => {
       color: "text-purple-500",
       bgColor: "bg-purple-500/10",
       skills: [
-        { name: "PostgreSQL", level: 65 },
-        { name: "MySQL", level: 80 },
-        { name: "SQL", level: 58 }
+        { name: "PostgreSQL", level: 80 },
+        { name: "MySQL", level: 85 },
+        { name: "SQL", level: 78 }
       ]
     },
     {
@@ -78,8 +78,7 @@ const Skills = () => {
       bgColor: "bg-orange-500/10",
       skills: [
         { name: "Git & GitHub", level: 75 },
-        { name: "Docker", level: 5 },
-        { name: "Linux", level: 10 }
+        { name: "CI/CD", level: 60 }
       ]
     }
   ];
@@ -218,10 +217,10 @@ const Skills = () => {
         {/* SEÇÃO DE ESTATÍSTICAS */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { icon: <Globe className="h-8 w-8 text-primary" />, number: "15+", label: "Projetos Web" },
-            { icon: <Smartphone className="h-8 w-8 text-primary" />, number: "5+", label: "Apps Mobile" },
-            { icon: <GitBranch className="h-8 w-8 text-primary" />, number: "500+", label: "Commits" },
-            { icon: <Code2 className="h-8 w-8 text-primary" />, number: "3+", label: "Anos Coding" }
+            { icon: <Globe className="h-8 w-8 text-primary" />, number: "10+", label: "Projetos Web" },
+            { icon: <Smartphone className="h-8 w-8 text-primary" />, number: "1+", label: "Apps Mobile" },
+            { icon: <GitBranch className="h-8 w-8 text-primary" />, number: "240+", label: "Commits" },
+            { icon: <Code2 className="h-8 w-8 text-primary" />, number: "2+", label: "Anos Coding" }
           ].map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="inline-flex items-center justify-center p-4 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 mb-4">
