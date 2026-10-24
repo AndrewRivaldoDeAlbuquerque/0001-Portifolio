@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="container mx-auto text-center relative z-10 max-w-4xl">
         
         {/* FOTO DE PERFIL */}
-        <div className="animate-fade-in-up mb-8">
+        <div className="animate-fade-in-up mt-8">
           {/* 
             COMPONENTE AVATAR:
             - Avatar: container principal do componente
@@ -66,7 +66,7 @@ const Hero = () => {
             - hover:scale-105: efeito de zoom no hover
             - transition-transform: animação suave
           */}
-          <Avatar className="w-52 h-52 mx-auto border-4 border-primary/20 shadow-lg hover:scale-105 transition-transform duration-300">
+          <Avatar className="w-52 h-52 mt-20 mx-auto border-4 border-primary/20 shadow-lg hover:scale-105 transition-transform duration-300">
             <AvatarImage 
               src={profilePhoto} 
               alt="Foto de perfil de Andrew Alves"
@@ -101,7 +101,7 @@ const Hero = () => {
         <div className="animate-fade-in-up mb-8" style={{ animationDelay: "0.3s" }}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Apaixonado por criar experiências digitais incríveis. 
-            Especializado em React, Spring boot e tecnologias modernas de desenvolvimento web.
+            Especializado em tecnologias modernas de desenvolvimento web.
             Transformo ideias em soluções funcionais e elegantes.
           </p>
         </div>

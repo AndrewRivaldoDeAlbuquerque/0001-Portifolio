@@ -22,20 +22,20 @@ const About = () => {
     {
       icon: <User className="h-8 w-8 text-primary" />,
       title: "Quem sou eu",
-      description: "Desenvolvedor apaixonado por tecnologia com 1+ anos de experiência criando soluções web inovadoras.",
+      description: "Desenvolvedor apaixonado por tecnologia com 2+ anos de experiência criando soluções web inovadoras.",
       items: ["Focado em qualidade", "Sempre aprendendo", "Orientado a resultados"]
     },
     {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Formação",
-      description: "Graduando em Tecnico em desenvolvimento de sistemas e em Engenharia de Software.",
+      description: "Graduado em Técnico em desenvolvimento de sistemas e Cursando Análise e desenvolvimento de sistemas.",
       items: ["Desenvolvimento de Sistemas", "Cursos online especializados", "Certificações técnicas"]
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
       title: "Experiência",
       description: "Trabalhei em projetos variados, desde startups até empresas consolidadas.",
-      items: ["15+ projetos concluídos", "Metodologias ágeis", "Trabalho em equipe"]
+      items: ["10+ projetos concluídos", "Metodologias ágeis", "Trabalho em equipe"]
     },
     {
       icon: <Heart className="h-8 w-8 text-primary" />,
@@ -75,8 +75,8 @@ const About = () => {
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-6">
               Sou um desenvolvedor <span className="text-primary font-semibold">Full Stack</span> pronto
               para criar experiências digitais que fazem a diferença. Minha jornada na programação começou há 
-              alguns anos e desde então venho me especializando em tecnologias modernas como 
-              <span className="text-accent font-semibold"> React, Spring boot, TypeScript</span> e muito mais.
+              2 anos e desde então venho me especializando em tecnologias modernas como 
+              <span className="text-accent font-semibold"> React, Php/Laravel, JavaScript, Node.js, Spring boot, TypeScript</span> e muito mais.
             </p>
             
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">

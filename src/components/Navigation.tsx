@@ -92,7 +92,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("home")}
           >
             {/* gradient-text é uma classe CSS personalizada que aplicamos no index.css */}
-            Meu Portfólio
+            Portifólio de Andrew
           </div>
 
           {/* MENU DESKTOP - Visível apenas em telas médias e maiores */}
