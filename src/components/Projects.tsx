@@ -3,6 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Eye, Filter } from "lucide-react";
+import gez1n from "../../public/genz1n.png";
+import lumenous from "../../public/lumenous.png";
+import lpsaude from "../../public/lp-saude.png";
+import lpbeneficios from "../../public/lp-beneficios.png";
+import gestaoCartoes from "../../public/gestao-de-cartoes.png";
+import artefrequencia from "../../public/arte-frequencia.png";
+
 
 /*
   SEÇÃO DE PROJETOS
@@ -30,7 +37,7 @@ const Projects = () => {
       description: "Portifólio da empresa GenZ1n Tech, apresentando seus serviços e projetos.",
       technologies: ["React", "Node.js", "PostgreSQL", "Vite", "Tailwind"],
       category: "frontend",
-      image: "/public/genz1n.png",
+      image: gez1n,
       demoUrl: "https://gz1n.com/",
       githubUrl: null,
       status: "Concluído",
@@ -42,7 +49,7 @@ const Projects = () => {
       description: "É um site institucional para a empresa Lumenous, destacando seu produto e serviços. Onde é possível que o usuário edite toda a parte do frontend pelo Dashboard.",
       technologies: ["React", "TypeScript", "PHP/Larável", "MySQL", "Tailwind"],
       category: "fullstack", 
-      image: "/public/lumenous.png",
+      image: lumenous,
       demoUrl: "https://www.lumenous.com.br/",
       githubUrl: null,
       status: "Concluído",
@@ -54,7 +61,7 @@ const Projects = () => {
       description: "Landing page para uma clínica particular, com informações sobre os serviços e tratamentos disponíveis.",
       technologies: ["React", "TypeScript", "Vite", "Tailwind"],
       category: "frontend",
-      image: "/public/lp-saude.png",
+      image: lpsaude,
       demoUrl: "https://lpsauderecife.com.br/",
       githubUrl: null,
       status: "Concluído",
@@ -67,7 +74,7 @@ const Projects = () => {
       longDescription: "Página desenvolvida com foco em conversão, incluindo A/B testing, analytics avançados, formulários otimizados e integração com CRM.",
       technologies: ["React", "TypeScript", "Vite", "Tailwind"],
       category: "frontend",
-      image: "/public/lp-beneficios.png",
+      image: lpbeneficios,
       demoUrl: "https://lpbeneficios.com.br/",
       githubUrl: null,
       status: "Concluído",
@@ -80,7 +87,7 @@ const Projects = () => {
       longDescription: "App desenvolvido em React Native com foco na experiência mobile. Sincronização automática, widgets personalizáveis e integração com calendários.",
       technologies: ["React", "Flutter", "Java/Spring Boot", "Vite"],
       category: "fullstack/mobile",
-      image: "/public/arte-frequencia.png",
+      image: artefrequencia,
       demoUrl: "https://projeto-arte-frequencia.netlify.app/",
       githubUrl: null,
       status: "Concluído",
@@ -92,7 +99,7 @@ const Projects = () => {
       description: "Aplicação web para gerenciamento de cartões de crédito, permitindo controle de gastos, alertas de vencimento e relatórios detalhados.",
       technologies: ["Next.js", "TypeScript", "React", "Lovable UI", "PostgreSQL"],
       category: "fullstack",
-      image: "/public/gestao-de-cartoes.png",
+      image: gestaoCartoes,
       demoUrl: null,
       githubUrl: "https://github.com/AndrewRivaldoDeAlbuquerque/Gestao-de-cartao",
       status: "Em desenvolvimento",
